@@ -1,6 +1,6 @@
 import sqlalchemy.orm as _orm
 
-import models as _models, shema as _schemas, db_handler as _db
+from server import db_handler as _db, models as _models, shema as _schemas
 
 
 def create_database():

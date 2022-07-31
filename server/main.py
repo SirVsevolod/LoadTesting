@@ -1,8 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException
-from shema import *
-import shema as shm
+from server import services as serv, shema as shm
 import sqlalchemy.orm as orm
-import services as serv
 
 app = FastAPI()
 

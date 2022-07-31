@@ -1,5 +1,5 @@
 import sqlalchemy
-import db_handler as _database
+from server import db_handler as _database
 
 
 class User(_database.Base):

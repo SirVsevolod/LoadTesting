@@ -1,6 +1,6 @@
-from locust import HttpUser, TaskSet, task, between
+from locust import HttpUser, task, between
 import random as rnd
-import DOPFunc
+from loadTest import DOPFunc
 
 
 class UserTest(HttpUser):
