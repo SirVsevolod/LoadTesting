@@ -1,6 +1,8 @@
 from fastapi import FastAPI, Depends, HTTPException
-from server import services as serv, shema as shm
+import server.shema as shm
+import server.services as serv
 import sqlalchemy.orm as orm
+import uvicorn
 
 app = FastAPI()
 
@@ -26,4 +28,5 @@ def createUser(users: shm.CreateUser, db: orm.Session = Depends(serv.get_db)):
         raise HTTPException(status_code=400, detail="you can't use this login")
     return serv.create_user(db=db, user=users)
 
-
+if __name__ == "__main__":
+    uvicorn.run(app)
